@@ -12,6 +12,8 @@ public class MainActivity extends AppCompatActivity {
         System.out.println("application started");
         test();
         System.out.println(math(3,4));
+        makeMusicians();
+        makeSimpsons();
 
     }
 
@@ -31,8 +33,15 @@ public class MainActivity extends AppCompatActivity {
 
         Musician james = new Musician("James Hetfield","Guitar", "50");
 
+    }
 
+    public void makeSimpsons(){
 
+        Simpsons homer = new Simpsons("Homer Simpson", "50", "Nuclear Reactor Chief");
+        System.out.println(homer.getName());
+        homer.setName("Homer James Simpson");
+        System.out.println(homer.getName());
 
     }
+
 }
