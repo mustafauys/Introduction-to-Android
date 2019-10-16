@@ -21,47 +21,72 @@ public class MainActivity extends AppCompatActivity {
         editText = (EditText) findViewById(R.id.editText);
         editText2 = (EditText) findViewById(R.id.editText2);
         resultText = (TextView) findViewById(R.id.textView);
-
-        resultText.setText("Test");
+        
     }
 
     public void sum (View view ) {
 
-        int a = Integer.parseInt(editText.getText().toString());
-        int b = Integer.parseInt(editText2.getText().toString());
+        if (editText.getText().toString().matches("") || editText2.getText().toString().matches("")){
 
-        int resultInteger = a + b;
+            resultText.setText("Numara Yok !");
 
-        resultText.setText("Result: " + resultInteger);
+        } else {
+            int a = Integer.parseInt(editText.getText().toString());
+            int b = Integer.parseInt(editText2.getText().toString());
+
+            int resultInteger = a + b;
+
+            resultText.setText("Result: " + resultInteger);
+        }
+
+
 
     }
 
     public void deduct (View view){
 
-        int a = Integer.parseInt(editText.getText().toString());
-        int b = Integer.parseInt(editText2.getText().toString());
+        if (editText.getText().toString().matches("") || editText2.getText().toString().matches("")){
 
-        int resultInteger = a - b;
+            resultText.setText("Numara Yok !");
 
-        resultText.setText("Result: " + resultInteger);
+        } else {
+            int a = Integer.parseInt(editText.getText().toString());
+            int b = Integer.parseInt(editText2.getText().toString());
+
+            int resultInteger = a - b;
+
+            resultText.setText("Result: " + resultInteger);
+        }
 
     }
 
     public void multiply (View view){
-        int a = Integer.parseInt(editText.getText().toString());
-        int b = Integer.parseInt(editText2.getText().toString());
+        if (editText.getText().toString().matches("") || editText2.getText().toString().matches("")){
 
-        int resultInteger = a * b;
+            resultText.setText("Numara Yok !");
 
-        resultText.setText("Result: " + resultInteger);
+        } else {
+            int a = Integer.parseInt(editText.getText().toString());
+            int b = Integer.parseInt(editText2.getText().toString());
+
+            int resultInteger = a * b;
+
+            resultText.setText("Result: " + resultInteger);
+        }
     }
 
     public void divide (View view){
-        int a = Integer.parseInt(editText.getText().toString());
-        int b = Integer.parseInt(editText2.getText().toString());
+        if (editText.getText().toString().matches("") || editText2.getText().toString().matches("")){
 
-        int resultInteger = a / b;
+            resultText.setText("Numara Yok !");
 
-        resultText.setText("Result: " + resultInteger);
+        } else {
+            int a = Integer.parseInt(editText.getText().toString());
+            int b = Integer.parseInt(editText2.getText().toString());
+
+            int resultInteger = a / b;
+
+            resultText.setText("Result: " + resultInteger);
+        }
     }
 }
