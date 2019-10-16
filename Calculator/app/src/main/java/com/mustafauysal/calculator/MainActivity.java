@@ -1,0 +1,67 @@
+package com.mustafauysal.calculator;
+
+import android.speech.tts.TextToSpeech;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.TextView;
+
+public class MainActivity extends AppCompatActivity {
+
+    TextView resultText;
+    EditText editText;
+    EditText editText2;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        editText = (EditText) findViewById(R.id.editText);
+        editText2 = (EditText) findViewById(R.id.editText2);
+        resultText = (TextView) findViewById(R.id.textView);
+
+        resultText.setText("Test");
+    }
+
+    public void sum (View view ) {
+
+        int a = Integer.parseInt(editText.getText().toString());
+        int b = Integer.parseInt(editText2.getText().toString());
+
+        int resultInteger = a + b;
+
+        resultText.setText("Result: " + resultInteger);
+
+    }
+
+    public void deduct (View view){
+
+        int a = Integer.parseInt(editText.getText().toString());
+        int b = Integer.parseInt(editText2.getText().toString());
+
+        int resultInteger = a - b;
+
+        resultText.setText("Result: " + resultInteger);
+
+    }
+
+    public void multiply (View view){
+        int a = Integer.parseInt(editText.getText().toString());
+        int b = Integer.parseInt(editText2.getText().toString());
+
+        int resultInteger = a * b;
+
+        resultText.setText("Result: " + resultInteger);
+    }
+
+    public void divide (View view){
+        int a = Integer.parseInt(editText.getText().toString());
+        int b = Integer.parseInt(editText2.getText().toString());
+
+        int resultInteger = a / b;
+
+        resultText.setText("Result: " + resultInteger);
+    }
+}
