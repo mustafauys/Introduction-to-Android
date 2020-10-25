@@ -9,9 +9,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    TextView resultText;
-    EditText editText;
-    EditText editText2;
+    
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
